@@ -20,6 +20,9 @@ namespace PAMSI_LAB3
         public MainWindow()
         {
             InitializeComponent();
+            int[] x = { 1, 2 };
+            FileTests tfw = new FileTests(x);
+            tfw.printTests();
         }
 
         private void btnStackAction_Click(object sender, RoutedEventArgs e)
@@ -140,13 +143,7 @@ namespace PAMSI_LAB3
 
         private void btnTest_Click(object sender, RoutedEventArgs e)
         {
-            uint cycles, c1, c2, c3;
 
-            if (uint.TryParse(txbCycles.Text, out cycles) && uint.TryParse(txbC1.Text, out c1)
-                && uint.TryParse(txbC2.Text, out c2) && uint.TryParse(txbC3.Text, out c3))
-                Tests.Test(cycles, c1, txbCommandsT);
-            else
-                MessageBox.Show("Wpisz prawidlowe dane");
         }
 
         private void btnHanoi_Click(object sender, RoutedEventArgs e)
