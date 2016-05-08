@@ -22,7 +22,7 @@ namespace MyCollections
 
             Count--;
 
-            return elements[idx_first = (++idx_first % MaxSize)];
+            return elements[(idx_first = (++idx_first % MaxSize)) - 1];
         }
 
         public T Peek()
